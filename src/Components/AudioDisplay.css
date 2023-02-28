@@ -1,0 +1,24 @@
+.mySongBox:hover {
+    transform: scale(1.06, 1.06);
+    transition: all 0.1s linear;
+    background-color: #dae6f4;
+}
+
+.mySongBox {
+    height: 16rem;
+}
+.bodyOfcard{
+    padding:1rem 0 1rem 0.4rem;
+}
+
+.audiotag {
+    width: 15rem;
+    height: 5rem;
+    display: none;
+}
+h4{
+    font-size: larger;
+}
+h6{
+    font-size: smaller;
+}
