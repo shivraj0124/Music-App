@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Marathi from './Components/Marathi';
 import HindiSong from './Components/HindiSong';
 import EnglishSong from './Components/EnglishSong';
-
-
+import Home from './Components/Home';
+import Footer from './Components/Footer';
 function App() {
 
   return (
@@ -13,7 +13,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          
+          <Route exact path='/' element={<Home />} >
+          </Route>
           <Route exact path="/Marathi" element={<Marathi />} >            
           </Route>
           <Route exact path="/HindiSong" element={<HindiSong />} >            
@@ -21,7 +22,7 @@ function App() {
           <Route exact path="/EnglishSong" element={<EnglishSong />} >            
           </Route>
         </Routes>
-        
+        <Footer />        
       </BrowserRouter>
       
     

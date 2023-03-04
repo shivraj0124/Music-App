@@ -4,7 +4,7 @@ function HindiSong(){
     const Hindi = {
         Songs: [
             {
-                name: "Khairiya",
+                name: "Khairiyat",
                 artists: "Arijit Singh, Pritam",
                 imgUrl: "https://i.pinimg.com/originals/ab/69/76/ab6976576facf8b77013540b2abcf2d1.jpg",
                 songUrl: "https://pwdown.info/113422/Khairiyat%20Happy%20-%20Chhichhore.mp3"

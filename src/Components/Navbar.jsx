@@ -12,6 +12,7 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse ms-5" id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-5 ">
+                            <Link className="nav-link ms-3 forNavItem" aria-current="page" to="/Home">Home</Link>
                             <Link className="nav-link ms-3 forNavItem" aria-current="page" to="/Marathi">Marathi</Link>
                             <Link className="nav-link ms-3 forNavItem" aria-current="page" to="/HindiSong">Hindi</Link>
                             <Link className="nav-link ms-3 forNavItem" aria-current="page" to="/EnglishSong">English</Link>
