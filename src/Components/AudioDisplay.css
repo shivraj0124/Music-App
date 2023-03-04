@@ -1,24 +1,79 @@
-.mySongBox:hover {
-    transform: scale(1.06, 1.06);
-    transition: all 0.1s linear;
-    background-color: #dae6f4;
-}
-
-.mySongBox {
-    height: 16rem;
-}
-.bodyOfcard{
-    padding:1rem 0 1rem 0.4rem;
-}
 
 .audiotag {
-    width: 15rem;
-    height: 5rem;
+    transition: all 0.1s linear;
+    z-index: 2;
+    position: absolute;
+    width: 80%;
+    height: 2.3rem;
+    transition: all 0.1s linear;
+    z-index: 2;
+    position: absolute;
+    top: 12.4rem;
+    left: 1.9rem;
     display: none;
 }
-h4{
+
+h4 {
     font-size: larger;
 }
-h6{
+
+h6 {
     font-size: smaller;
 }
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
+.outrDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.myCard {
+    width: 300px;
+    height: max-content;
+   
+    padding: 1.2rem 1.2rem 0 1.2rem;
+    margin: 1.5rem;
+    cursor: pointer;
+    transform: scale(1.06, 1.06);
+    transition: all 0.1s linear;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+-webkit-box-shadow: 0px -1px 5px 4px rgba(235, 232, 235, 1);
+    -moz-box-shadow: 0px -1px 5px 4px rgba(235, 232, 235, 1);
+    box-shadow: 0px -1px 5px 4px rgba(235, 232, 235, 1);
+}
+.myCard:hover{
+    background-color: #d8e9f3;
+}
+.myImage {
+    width: 100%;
+    height: max-content;
+    
+}
+img{
+    border-radius: 3px;
+}
+.titleName {
+    margin-top: 0.8rem;
+}
+
+.cardContain {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+.cardBody{
+    visibility: visible;
+}
+

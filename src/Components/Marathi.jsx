@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './AudioDisplay.css';
+
+import CurrentSong from './CurrentSong'
 function Marathi() {
     const maRathi = {
         Songs: [
@@ -18,7 +19,7 @@ function Marathi() {
             {
                 name: "Shivba Raja - Sher Shivraj",
                 artists: "Avadhoot Gandhi, Devdutta Manisha",
-                imgUrl: "https://www.pagalworld.tv/GpE34Kg9Gq/113597/149250-shivba-raja-sher-shivraj-mp3-song-300.jpg",
+                imgUrl: "https://images.news18.com/ibnlive/uploads/2020/02/mahesh-manjerakar.jpg",
                 songUrl: "https://pwdown.info/113597/Shivba%20Raja%20-%20Sher%20Shivraj.mp3"
             },
 
@@ -79,61 +80,10 @@ function Marathi() {
 
         ]
     }
-    const [songC, setSongC] = useState("Songs");
-    // count the div time
-    const [count, setCount] = useState(0);
-    // show audio control pannel
-    const [audioShow, setAudioShow] = useState(null);
-    // onclick set height of div
-    const [outDiv, setOutDiv] = useState(null);
-    let myCountSameDiv = 0
-    const showPlaySong = (e) => {
-        setCount(count + 1);
-        let outerDiv = e.currentTarget;
-        console.log(outerDiv);
-        let audioT = outerDiv.lastElementChild;
-        console.log(audioT);
-        setAudioShow(audioT)
-        setOutDiv(outerDiv)
-        audioT.style.display = "block";
-        outerDiv.style.height = "20rem";
-        console.log(outerDiv.id);
-        console.log(outDiv.id);
-        if (count >= 1) {
-            if (outerDiv.id === outDiv.id) {
-                myCountSameDiv = myCountSameDiv + 1;
-                if (myCountSameDiv % 2 != 0) {
-                    audioShow.style.display = 'none';
-                    outDiv.style.height = '16rem';
-                } else {
-                    audioT.style.display = "block";
-                    outerDiv.style.height = "20rem";
-                }
-            } else {
-                myCountSameDiv = 0;
-                audioShow.style.display = 'none';
-                outDiv.style.height = '16rem';
-            }
-        }
-        audioShow.pause();
-    }
-
-    return (
-        <div className="container ">
-            {/* <h4>Marathi Songs</h4> */}
-            <div className="row ">
-                {maRathi[songC].map((itemOne, b) => (
-                    <div className="card mySongBox sm-2" style={{ width: '18rem', cursor: 'pointer' }} id={b} key={b} onClick={showPlaySong}>
-                        <img src={itemOne.imgUrl} className="card-img-top" alt="img" style={{ height: '10rem' }} />
-                        <div className="card-body bodyOfcard">
-                            <h4 className="card-title" >{itemOne.name}</h4>
-                            <h6 style={{ color: 'gray' }} >{itemOne.artists}</h6>
-                        </div>
-                        <audio className='audiotag' src={itemOne.songUrl} controls />
-                    </div>
-                ))}
-            </div>
-        </div>
+    return(
+        <>
+            <CurrentSong typeS={maRathi} SongS="Songs" />
+        </>
     )
 }
 

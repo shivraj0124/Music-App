@@ -1,15 +1,19 @@
 #root {
   max-width: 1280px;
-  margin: 0.2rem auto;
-  /* padding-left: 2rem; */
+  margin:auto;
+ 
+} 
 
+.forMargin{
+  margin-left:8rem;
 }
-
-.card {
-  padding:1em;
-  margin:3rem 1rem;
+.forNavItem:hover{
+   border-bottom: 2px solid blue;
+  transition: all 0.1s ease-in;
+  
 }
-
-.read-the-docs {
-  color: #888;
+@media screen and (max-width:768px){
+  .forMargin{
+  margin-left:0.5rem;
+}
 }
