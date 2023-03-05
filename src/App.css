@@ -18,7 +18,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 5s;
+  -webkit-animation: fadeinout 1.2s infinite forwards;
+    animation: fadeinout 1.2s infinite forwards;
 }
 .conatinerHome{
   margin-top:50px;
@@ -46,12 +47,26 @@
 }
 
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+@-webkit-keyframes fadeinout {
 
+  0%,
   100% {
     opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeinout {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
   }
 }
